@@ -16,5 +16,6 @@ class Tetris {
         window.setLocationRelativeTo(null);
         window.setVisible(true);
 
+        gp.launchGame();
     }
 }

@@ -14,10 +14,13 @@ public class GamePanel extends JPanel implements Runnable{
     Gameplay gm;
 
     public GamePanel(){
+        //settings
         this.setPreferredSize(new Dimension(WIDTH,HEIGHT));
         this.setBackground(Color.black);
         this.setLayout(null);
-
+        //implements key listener
+        this.addKeyListener(new KeyHandler());
+        this.setFocusable(true);
         gm = new Gameplay();
     }
 
@@ -46,7 +49,9 @@ public class GamePanel extends JPanel implements Runnable{
         }
     }
     public void update(){
-        gm.update();
+        if (KeyHandler.pausePressed == false){
+            gm.update();
+        }
     }
     public void paintComponent (Graphics g){
         super.paintComponent(g);
