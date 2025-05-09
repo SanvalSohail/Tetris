@@ -120,7 +120,7 @@ public class Gameplay {
         for(int i = 0; i < setBlocks.size(); i++){
             setBlocks.get(i).draw(g2);
         }
-        //Draw Pause
+        //Draw Pause Text
         g2.setColor(Color.yellow);
         g2.setFont(g2.getFont().deriveFont(50f));
         if(KeyHandler.pausePressed){
